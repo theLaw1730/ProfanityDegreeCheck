@@ -38,7 +38,7 @@ def main():
         for slur in slurs:
             slur_count = slur_count + tweet.count(slur)
         
-        #degree of racial profanity is assumed to be the percentage(upto 2 decimal places) of appearance of slur words per tweet
+        #degree of racial profanity is assumed to be the percentage(upto 2 decimal places) of appearance of slur words in the tweet
         degree_profanity = "{:.2f}".format(( slur_count / len(tweet.split()) ) * 100)
         
         """
