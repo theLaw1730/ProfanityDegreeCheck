@@ -38,14 +38,14 @@ def main():
         for slur in slurs:
             slur_count = slur_count + tweet.count(slur)
         
-        #degree of racial profanity is assumed to be the percentage(upto 2 decimal places) of appearance of slur words in the tweet
+        #degree of racial profanity is assumed to be the percentage(upto 2 decimal places) of appearance of slur words per tweet
         degree_profanity = "{:.2f}".format(( slur_count / len(tweet.split()) ) * 100)
         
         """
             writing result in results.txt in the following format,
             Tweet: [TWEET]
                 word count: [WORD COUNT OF TWEET], slur count: [NUMBER OF TIMES SLUR WORDS HAVE APPEARED]
-                degree of racial profanity: [PERECENTAGE APPERANCE OF SLUR WORDS (upto 2 decimal places)]
+                degree of racial profanity: [PERECENTAGE APPEARANCE OF SLUR WORDS (upto 2 decimal places)]
         
         """
         result.write(f" Tweet: {tweet} \n\t word count: {len(tweet.split())}, slur count: {slur_count} \n\t degree of racial profanity: {degree_profanity}% \n\n")
