@@ -46,7 +46,6 @@ def main():
             Tweet: [TWEET]
                 word count: [WORD COUNT OF TWEET], slur count: [NUMBER OF TIMES SLUR WORDS HAVE APPEARED]
                 degree of racial profanity: [PERECENTAGE APPEARANCE OF SLUR WORDS (upto 2 decimal places)]
-        
         """
         result.write(f" Tweet: {tweet} \n\t word count: {len(tweet.split())}, slur count: {slur_count} \n\t degree of racial profanity: {degree_profanity}% \n\n")
 
